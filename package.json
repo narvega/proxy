@@ -1,6 +1,6 @@
 {
   "name": "@narvega/proxy",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Stdio proxy that bridges Claude Desktop to the Narvega MCP gateway",
   "type": "module",
   "bin": {

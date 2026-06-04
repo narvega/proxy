@@ -7,13 +7,16 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { ListToolsRequestSchema, CallToolRequestSchema } from '@modelcontextprotocol/sdk/types.js';
 
 const baseUrl = process.argv[2];
+const gatewayKey = process.argv[3];
 if (!baseUrl) {
-  process.stderr.write('Usage: npx @narvega/proxy <gateway-sse-url>\n');
-  process.stderr.write('Example: npx @narvega/proxy https://gateway.narvega.com/acme/sse\n');
+  process.stderr.write('Usage: npx @narvega/proxy <gateway-sse-url> <gateway-key>\n');
+  process.stderr.write('Example: npx @narvega/proxy https://gateway.narvega.com/acme/sse nvg_abc123\n');
   process.exit(1);
 }
 
 const url = new URL(baseUrl);
+
+if (gatewayKey) url.searchParams.set('key', gatewayKey);
 
 const userEmail = process.env.NARVEGA_USER_EMAIL;
 const userRole  = process.env.NARVEGA_USER_ROLE;
