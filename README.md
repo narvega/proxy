@@ -17,7 +17,7 @@ Add this to your `claude_desktop_config.json`:
   "mcpServers": {
     "narvega": {
       "command": "npx",
-      "args": ["-y", "@narvega/proxy", "https://gateway.narvega.com/your-slug/sse"]
+      "args": ["-y", "@narvega/proxy", "https://gateway.narvega.com/your-slug/sse", "nvg_your-connection-key"]
     }
   }
 }
@@ -26,10 +26,10 @@ Add this to your `claude_desktop_config.json`:
 ### Claude CLI
 
 ```bash
-claude mcp add narvega -- npx -y @narvega/proxy "https://gateway.narvega.com/your-slug/sse"
+claude mcp add narvega -- npx -y @narvega/proxy "https://gateway.narvega.com/your-slug/sse" "nvg_your-connection-key"
 ```
 
-Replace `your-slug` with the slug from your Narvega dashboard.
+Replace `your-slug` and `nvg_your-connection-key` with the values from **Settings → Connection** in your Narvega dashboard.
 
 ---
 
