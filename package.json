@@ -1,7 +1,7 @@
 {
   "name": "@narvega/proxy",
-  "version": "0.1.5",
-  "description": "Stdio proxy that bridges Claude Desktop to the Narvega MCP gateway",
+  "version": "0.1.6",
+  "description": "Stdio-to-SSE proxy that bridges MCP clients to the Narvega governance gateway",
   "type": "module",
   "bin": {
     "narvega-proxy": "proxy.mjs"
@@ -22,9 +22,9 @@
   "license": "MIT",
   "keywords": [
     "mcp",
-    "claude",
     "narvega",
     "governance",
-    "proxy"
+    "proxy",
+    "ai-agents"
   ]
 }
